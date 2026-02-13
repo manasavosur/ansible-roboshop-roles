@@ -1,0 +1,5 @@
+- name: testing demo role
+  hosts: localhost
+  connection: local
+  tasks:
+  - demo
