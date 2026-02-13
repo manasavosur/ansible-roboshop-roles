@@ -5,8 +5,8 @@
 
 - name: install mongodb 
   ansible.builtin.dnf:
-  name: mongodb-org
-  state: present
+    name: mongodb-org
+    state: present
 
 - name: allow remote connections
   ansible.builtin.replace:
@@ -17,6 +17,6 @@
       
 - name: start and enable mongodb
   ansible.builtin.service:
-  name: mongod
-  state: started
-  enabled: yes
+    name: mongod
+    state: started
+    enabled: yes
