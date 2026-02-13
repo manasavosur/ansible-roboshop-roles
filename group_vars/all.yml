@@ -1,0 +1,11 @@
+ansible_user: ec2-user
+ansible_password: DevOps321
+MONGODB_HOST: mongodb-dev.chotu.online
+CATALOGUE_HOST: catalogue-dev.chotu.online
+REDIS_HOST: redis-dev.chotu.online
+USER_HOST: user-dev.chotu.online
+CART_HOST: cart-dev.chotu.online
+MYSQL_HOST: mysql-dev.chotu.online
+SHIPPING_HOST: shipping-dev.chotu.online
+RABBITMQ_HOST: rabbitmq-dev.chotu.online
+PAYMENT_HOST: payment-dev.chotu.online
