@@ -3,12 +3,18 @@ regions:
   - us-east-1
 
 hostnames:
-  - tag:Name
-  
+  - tag:Name                  #we get output: frontend-dev, user-dev etc,
+
+
 filters:
   instance-state-name : running
   tag:Name: frontend-dev
 
 compose:
-  # This sets the ansible_host variable to connect with the private IP address without changing the hostname.
+  # connect using private IP internally (it prints private ip as output)
   ansible_host: private_ip_address  
+
+keyed_groups:
+- separator: ''
+  # name of the group is frontend ( in output it prints name of group as frontend in place of hosts)
+  key: tags.Name | regex_replace('-.*$', '')  
