@@ -3,7 +3,4 @@ regions:
   - us-east-1
 
 hostnames:
-  - tag:Name
-
-compose:
-  ansible_host: private_ip_address
+- ip-address
