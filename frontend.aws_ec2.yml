@@ -3,3 +3,5 @@ regions:
 - us-east-1
 hostnames:
 - private-ip-address
+compose:
+  private_ip: private_ip_address
