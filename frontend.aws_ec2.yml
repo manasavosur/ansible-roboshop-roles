@@ -3,7 +3,8 @@ regions:
   - us-east-1
 
 hostnames:
-  - private-ip-address               #we get output: frontend-dev, user-dev etc,
+  - private_ip_address
+  #- tag:Name              #we get output: frontend-dev, user-dev etc,
 
 
 filters:
