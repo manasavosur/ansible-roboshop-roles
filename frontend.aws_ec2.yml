@@ -18,4 +18,4 @@ compose:
 keyed_groups:
 - separator: ''
   # name of the group is frontend ( in output it prints name of group as frontend in place of hosts)
-  tags.Name | regex_replace('-.*$', '')
+  key: tags.Name | regex_replace('-.*$', '')
