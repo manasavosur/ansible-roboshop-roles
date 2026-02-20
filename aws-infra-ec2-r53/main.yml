@@ -1,6 +1,6 @@
 # ansible-playbook -i localhost, -e '{"instances":["mongodb","catalogue","redis","user","cart","mysql","shipping","rabbitmq","payment","frontend"]}'  -e action=create roboshop.yml
 - name: create ec2 and r53 records
-  hosts: all
+  hosts: localhost
   connection: local
   vars:
     sg_id: sg-021bb73561f3372ff
