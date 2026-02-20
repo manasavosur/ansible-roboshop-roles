@@ -1,23 +1,23 @@
 # 🚀 Roboshop Infra Setup
 
-## Create EC2 + Route53 Records
+## 1. Create EC2 + Route53 Records
 
 ansible-playbook -i localhost, aws-infra-ec2-r53/main.yml \
 -e '{"instances":["mongodb","catalogue","redis","user","cart","mysql","shipping","rabbitmq","payment","frontend"]}' \
 -e action=create
 
 
-## Destroy EC2 + Route53 Records
+## 2. Destroy EC2 + Route53 Records
 
 ansible-playbook -i localhost, aws-infra-ec2-r53/main.yml \
 -e '{"instances":["mongodb","catalogue","redis","user","cart","mysql","shipping","rabbitmq","payment","frontend"]}' \
 -e action=destroy
 
-## Command to Configure ONE Service
+## 3. Command to Configure ONE Service
 
 ansible-playbook -i inventory.ini roboshop.yml -e component=mongodb
 
-## If You Want To Configure All Services (Run One by One)
+## 4. If You Want To Configure All Services (Run One by One)
 
 ansible-playbook -i inventory.ini roboshop.yml -e component=mongodb
 ansible-playbook -i inventory.ini roboshop.yml -e component=redis
